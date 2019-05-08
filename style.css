@@ -1,0 +1,94 @@
+body {
+    background-color: white;
+}
+
+.sidenav {
+    height: 100%;
+    width: 170px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: black;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav h2 {
+    color: #f1f1f1;
+    padding-left: 16px;
+    padding-bottom: 10px;
+    font-weight: 725;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 20px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+}
+
+#active {
+    background-color: white;
+    color: black;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.main {
+    margin-left: 180px;
+    padding: 16px 10px;
+}
+
+#search-text {
+    color: white;
+    background: white;
+}
+
+#search-button {
+    color: black;
+}
+
+hr {
+    border: 1px solid gray;
+}
+/* What Kaine has added to the style sheet //8/5/19// for the html page */
+.right {
+    margin-left: 84%;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    top: -1px;
+    position: fixed;
+    
+    padding-top: 20px;
+    background-color: grey;
+}
+
+#line {
+    width: 73.3%;
+}
+
+#sortwidth {
+    width: 75%;
+}
+
+#projectwidth {
+    width: 79%;
+}
+#tableheight {
+    height: 200px;
+}
+#project {
+    max-width: 300px;
+    max-height: 200px;
+    border-color: grey;
+    border-style: solid;
+}
+
+.task-box {
+    
+}
