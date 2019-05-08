@@ -46,6 +46,15 @@ body {
     padding: 16px 10px;
 }
 
+#search-text {
+    color: white;
+    background: white;
+}
+
+#search-button {
+    color: black;
+}
+
 hr {
     border: 1px solid gray;
 }
