@@ -89,3 +89,8 @@ hr {
     border-style: solid;
 }
 
+.task-box {
+    width: 900px;
+    padding: 5px;
+    border: solid;
+}
