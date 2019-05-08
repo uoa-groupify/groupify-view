@@ -14,6 +14,13 @@ function insertFragments(element) {
 		var fragmentName = fragmentPlaceholder.attr(FRAGMENT_ATTR_NAME);
 
 		//insert fragment
-		fragmentPlaceholder.load("../fragments/" + fragmentName + ".html");
+		fragmentPlaceholder.load(
+			"../fragments/" + fragmentName + ".html",
+			function() {
+				$(this)
+					.children(":first")
+					.unwrap();
+			}
+		);
 	});
 }
