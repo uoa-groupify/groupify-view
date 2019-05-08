@@ -29,6 +29,10 @@ body {
     display: block;
 }
 
+#active {
+    color: #f1f1f1;
+}
+
 .current {
     background-color: white;
 }
