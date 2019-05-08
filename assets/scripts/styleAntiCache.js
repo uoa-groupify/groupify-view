@@ -17,4 +17,6 @@ function loadjscssfile(filename, filetype) {
 		document.getElementsByTagName("head")[0].appendChild(fileref);
 }
 
-loadjscssfile("./assets/styles/style.css", "css");
+var date = new Date();
+var timestamp = date.getTime();
+loadjscssfile("./assets/styles/style.css?timestamp=" + timestamp, "css");
