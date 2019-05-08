@@ -49,3 +49,37 @@ body {
 hr {
     border: 1px solid gray;
 }
+/* What Kaine has added to the style sheet //8/5/19// for the html page */
+.right {
+    margin-left: 84%;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    top: -1px;
+    position: fixed;
+    
+    padding-top: 20px;
+    background-color: grey;
+}
+
+#line {
+    width: 73.3%;
+}
+
+#sortwidth {
+    width: 75%;
+}
+
+#projectwidth {
+    width: 79%;
+}
+#tableheight {
+    height: 200px;
+}
+#project {
+    max-width: 300px;
+    max-height: 200px;
+    border-color: grey;
+    border-style: solid;
+}
+
