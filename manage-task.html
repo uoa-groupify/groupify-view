@@ -19,21 +19,83 @@
 			<script src="assets/scripts/styleAntiCache.js"></script>
 		</head>
 		<body>
-			<div class="sidenav">
-				<h2>Groupify</h2>
-				<!-- Move "id="active" to the page related to the html, it's used to let the user know which page they're on -->
-				<a id="active" href="#">Home </a>
-				<a href="#">Groups</a>
-				<a href="#">Tasks</a>
-				<a href="#">Chat</a>
-				<a href="#">Log Out</a>
-			</div>
+			<form class="form-horizontal">
+				<fieldset>
+					<!-- Form Name -->
+					<legend>Manage Task</legend>
 
-			<div class="main">
-				<h1>Manage Task</h1>
-				<hr />
-			</div>
-			<form></form>
+					<!-- Text input-->
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="textinput"
+							>Task Name</label
+						>
+						<div class="col-md-6">
+							<input
+								id="textinput"
+								name="textinput"
+								type="text"
+								placeholder="Build a dog house"
+								class="form-control input-md"
+							/>
+						</div>
+					</div>
+
+					<!-- Select Multiple -->
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="selectmultiple"
+							>Assigned to</label
+						>
+						<div class="col-md-6">
+							<select
+								id="selectmultiple"
+								name="selectmultiple"
+								class="form-control"
+								multiple="multiple"
+							>
+								<option value="1">Bobby</option>
+								<option value="2">Jamie</option>
+							</select>
+						</div>
+					</div>
+
+					<!-- Textarea -->
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="textarea"
+							>Task Description</label
+						>
+						<div class="col-md-4">
+							<textarea
+								class="form-control"
+								id="textarea"
+								name="textarea"
+							>
+	follow the dog house plans</textarea
+							>
+						</div>
+					</div>
+
+					<!-- Button (Double) -->
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="button1id"></label>
+						<div class="col-md-8">
+							<button
+								id="button1id"
+								name="button1id"
+								class="btn btn-success"
+							>
+								Submit
+							</button>
+							<button
+								id="button2id"
+								name="button2id"
+								class="btn btn-inverse"
+							>
+								Cancel
+							</button>
+						</div>
+					</div>
+				</fieldset>
+			</form>
 		</body>
 	</html>
 </html>
