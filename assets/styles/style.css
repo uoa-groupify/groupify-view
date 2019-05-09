@@ -40,6 +40,7 @@ body {
 
 .main {
     margin-left: 180px;
+    margin-top: 70px;
     padding: 16px 10px;
 }
 
@@ -68,12 +69,20 @@ hr {
     background-color: grey;
 }
 
-#line {
-    width: 73.3%;
+#sortwidth {
+    width: 90%;
+    margin-top: 0px;
+    margin-left: 7%;
+
+}
+#sortwidth2 {
+    width: 90%;
+    margin-left: 7%;
+
 }
 
-#sortwidth {
-    width: 75%;
+#tablecol {
+    width: 1%;
 }
 
 #projectwidth {
@@ -93,4 +102,12 @@ hr {
     width: 900px;
     padding: 5px;
     border: solid;
+}
+#topnav {
+    margin-left: 170px;
+    margin-top: -78px;
+    height: 82px;
+    width: 91%;
+    background-color: white;
+    position: fixed;
 }

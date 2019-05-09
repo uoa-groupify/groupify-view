@@ -15,6 +15,7 @@
 		<script src="assets/scripts/styleAntiCache.js"></script>
 	</head>
 	<body>
+
 		<!-- Side Nav starts here -->
 		<div class="sidenav">
 			<h2>Groupify</h2>
@@ -26,13 +27,52 @@
 			<a href="#">Log Out</a>
 		</div>
 		<!-- Main starts here -->
-		<div id="line" class="main">
-			<h1>Home - Project Overview</h1>
-			<hr />
-		</div>
+		<!-- Top navigation bar starts here -->
+		<nav id="topnav" class="navbar navbar-expand-lg navbar-light">
+			<a class="navbar-brand" href="#">Project Overview</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+			
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Overview <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Team Members</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Feedback</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Profile
+						</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" 
+							href="#">My Profile</a>
 
+						<a class="dropdown-item" 
+							href="#">Settings</a>
+
+					<div class="dropdown-divider"></div>
+						<a class="dropdown-item" 
+							href="#">Log Out</a>
+					</div>
+					</li>
+				</ul>
+
+			<form class="form-inline my-2 my-lg-0">
+				<input class="form-control mr-sm-2" type="search" placeholder="Search Projects..." aria-label="Search">
+					<button class="btn btn-secondary my-2 my-sm-0" type="submit">
+						Go
+					</button>
+			</form>
+			</div>
+		</nav>
 		<!-- Sort by flex box -->
-		<div class="main">
+		<!-- <div class="main">
 			<div class="d-flex flex-row justify-content-end">
 				<div class="p-2 mr-auto p-2">
 					<div class="dropdown">
@@ -57,9 +97,9 @@
 							>
 						</div>
 					</div>
-				</div>
+				</div> -->
 				<!-- Search bar flex box -->
-				<div class="p-2">
+				<!-- <div class="main p-2">
 					<nav class="navbar navbar-light">
 						<form class="form-inline">
 							<input
@@ -70,12 +110,12 @@
 							/>
 						</form>
 					</nav>
-				</div>
+				</div> -->
 			</div>
 		</div>
 		<!-- Nav box for project 1 picture & Task table -->
 		<div id="sortwidth" class="main">
-				<div class="d-flex flex-row">
+				<div id="sortwidth2" class="d-flex flex-row">
 					<!-- Project picture -->
 					<div class="p-2">
 						<img id="project" src="assets/images/project1.png" />
@@ -88,7 +128,7 @@
 									<th scope="col">Task</th>
 									<th scope="col">Assigned to</th>
 									<th scope="col">Desription</th>
-									<th scope="col">Completion</th>
+									<th id="tablecol" scope="col">Task Status</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -97,7 +137,7 @@
 									<td>Member 1</td>
 									<td>Task Description 1</td>
 									<td id="center">
-										<button type="button" class="btn btn-light">
+										<button type="button" class="btn-block btn btn-light">
 											Not started
 										</button>
 									</td>
@@ -107,7 +147,7 @@
 									<td>Member 2</td>
 									<td>Task Description 2</td>
 									<td id="center">
-										<button type="button" class="btn btn-warning">
+										<button type="button" class="btn-block btn btn-warning">
 											In progress
 										</button>
 									</td>
@@ -117,7 +157,7 @@
 									<td colspan="1">Member 3</td>
 									<td>Task Description 3</td>
 									<td id="center">
-										<button type="button" class="btn btn-success">
+										<button type="button" class="btn-block btn btn-success">
 											Complete
 										</button>
 									</td>
@@ -125,12 +165,36 @@
 							</tbody>
 						</table>
 					</div>
+					
+						<div id="tableheight" class="d-flex flex-column">
+							<div class="p-2">
+								<button type="button" class="btn-block btn btn-secondary">
+									Add Task
+								</button>
+							</div>
+							<div class="p-2">
+								<button type="button" class="btn-block btn btn-secondary">
+									Edit Project
+								</button>
+							</div>
+							<div class="p-2">
+									<button type="button" class="btn-block btn btn-secondary">
+										Feedback
+									</button>
+							</div>
+							<div class="p-2">
+								<button type="button" class="btn-block btn btn-danger">
+									Delete Project
+								</button>
+							</div>
+						</div>
+					
 				</div>
 			</div>
 
 		<!-- Nav box for project 2 picture & Task table -->
 		<div id="sortwidth" class="main">
-			<div class="d-flex flex-row">
+			<div id="sortwidth2" class="d-flex flex-row">
 				<!-- Project picture -->
 				<div class="p-2">
 					<img id="project" src="assets/images/project2.png" />
@@ -143,7 +207,7 @@
 								<th scope="col">Task</th>
 								<th scope="col">Assigned to</th>
 								<th scope="col">Desription</th>
-								<th scope="col">Completion</th>
+								<th id="tablecol" scope="col">Task Status</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -152,7 +216,7 @@
 								<td>Member 1</td>
 								<td>Task Description 1</td>
 								<td id="center">
-									<button type="button" class="btn btn-warning">
+									<button type="button" class="btn-block btn btn-warning">
 										In progress
 									</button>
 								</td>
@@ -162,7 +226,7 @@
 								<td>Member 2</td>
 								<td>Task Description 2</td>
 								<td id="center">
-									<button type="button" class="btn btn-warning">
+									<button type="button" class="btn-block btn btn-warning">
 										In progress
 									</button>
 								</td>
@@ -172,20 +236,43 @@
 								<td colspan="1">Member 3</td>
 								<td>Task Description 3</td>
 								<td id="center">
-									<button type="button" class="btn btn-success">
+									<button type="button" class="btn-block btn btn-success">
 										Complete
 									</button>
+									
 								</td>
 							</tr>
 						</tbody>
 					</table>
 				</div>
+				<div id="tableheight" class="d-flex flex-column">
+						<div class="p-2">
+							<button type="button" class="btn-block btn btn-secondary">
+								Add Task
+							</button>
+						</div>
+						<div class="p-2">
+							<button type="button" class="btn-block btn btn-secondary">
+								Edit Project
+							</button>
+						</div>
+						<div class="p-2">
+								<button type="button" class="btn-block btn btn-secondary">
+									Feedback
+								</button>
+						</div>
+						<div class="p-2">
+							<button type="button" class="btn-block btn btn-danger">
+								Delete Project
+							</button>
+						</div>
+					</div>
 			</div>
 		</div>
 
 		<!-- Nav box for project 3 picture & Task table -->
 		<div id="sortwidth" class="main">
-			<div class="d-flex flex-row">
+			<div id="sortwidth2" class="d-flex flex-row">
 				<!-- Project picture -->
 				<div class="p-2">
 					<img id="project" src="assets/images/project3.png" />
@@ -198,7 +285,7 @@
 								<th scope="col">Task</th>
 								<th scope="col">Assigned to</th>
 								<th scope="col">Desription</th>
-								<th scope="col">Completion</th>
+								<th id="tablecol" scope="col">Task Status</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -207,7 +294,7 @@
 								<td>Member 1</td>
 								<td>Task Description 1</td>
 								<td id="center">
-									<button type="button" class="btn btn-light">
+									<button type="button" class="btn-block btn btn-light">
 										Not started
 									</button>
 								</td>
@@ -217,7 +304,7 @@
 								<td>Member 2</td>
 								<td>Task Description 2</td>
 								<td id="center">
-									<button type="button" class="btn btn-light">
+									<button type="button" class="btn-block btn btn-light">
 										Not started
 									</button>
 								</td>
@@ -227,7 +314,7 @@
 								<td colspan="1">Member 3</td>
 								<td>Task Description 3</td>
 								<td id="center">
-									<button type="button" class="btn btn-light">
+									<button type="button" class="btn-block btn btn-light">
 										Not started
 									</button>
 								</td>
@@ -235,12 +322,34 @@
 						</tbody>
 					</table>
 				</div>
+				<div id="tableheight" class="d-flex flex-column">
+						<div class="p-2">
+							<button type="button" class="btn-block btn btn-secondary">
+								Add Task
+							</button>
+						</div>
+						<div class="p-2">
+							<button type="button" class="btn-block btn btn-secondary">
+								Edit Project
+							</button>
+						</div>
+						<div class="p-2">
+								<button type="button" class="btn-block btn btn-secondary">
+									Feedback
+								</button>
+						</div>
+						<div class="p-2">
+							<button type="button" class="btn-block btn btn-danger">
+								Delete Project
+							</button>
+						</div>
+					</div>
 			</div>
 		</div>
 
 		<!-- Nav box for project 4 picture & Task table -->
 		<div id="sortwidth" class="main">
-			<div class="d-flex flex-row">
+			<div id="sortwidth2" class="d-flex flex-row">
 				<!-- Project picture -->
 				<div class="p-2">
 					<img id="project" src="assets/images/project4.png" />
@@ -253,7 +362,7 @@
 								<th scope="col">Task</th>
 								<th scope="col">Assigned to</th>
 								<th scope="col">Desription</th>
-								<th scope="col">Completion</th>
+								<th id="tablecol" scope="col">Task Status</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -262,7 +371,7 @@
 								<td>Member 1</td>
 								<td>Task Description 1</td>
 								<td id="center">
-									<button type="button" class="btn btn-success">
+									<button type="button" class="btn-block btn btn-success">
 										Complete
 									</button>
 								</td>
@@ -272,7 +381,7 @@
 								<td>Member 2</td>
 								<td>Task Description 2</td>
 								<td id="center">
-									<button type="button" class="btn btn-success">
+									<button type="button" class="btn-block btn btn-success">
 										Complete
 									</button>
 								</td>
@@ -282,7 +391,7 @@
 								<td colspan="1">Member 3</td>
 								<td>Task Description 3</td>
 								<td id="center">
-									<button type="button" class="btn btn-success">
+									<button type="button" class="btn-block btn btn-success">
 										Complete
 									</button>
 								</td>
@@ -290,6 +399,28 @@
 						</tbody>
 					</table>
 				</div>
+				<div id="tableheight" class="d-flex flex-column">
+						<div class="p-2">
+							<button type="button" class="btn-block btn btn-secondary">
+								Add Task
+							</button>
+						</div>
+						<div class="p-2">
+							<button type="button" class="btn-block btn btn-secondary">
+								Edit Project
+							</button>
+						</div>
+						<div class="p-2">
+								<button type="button" class="btn-block btn btn-secondary">
+									Feedback
+								</button>
+						</div>
+						<div class="p-2">
+							<button type="button" class="btn-block btn btn-danger">
+								Delete Project
+							</button>
+						</div>
+					</div>
 			</div>
 		</div>
 
