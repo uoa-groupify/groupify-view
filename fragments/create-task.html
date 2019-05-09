@@ -1,0 +1,258 @@
+<style>
+	* {
+		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+			Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+		padding: 0px;
+		margin: 0px;
+	}
+
+	.create-task--card {
+		width: 800px;
+		height: 500px;
+		/* background: #ecf0f1; */
+		display: grid;
+		grid-template-rows: 1fr 3fr 3fr 1fr;
+		font-size: 20px;
+		grid-template-areas:
+			"header header header header header header"
+			"taskInfo taskInfo taskInfo assign assign assign"
+			"taskInfo taskInfo taskInfo assign assign assign"
+			"footer footer footer footer footer footer";
+	}
+
+	.create-task--header {
+		grid-area: header;
+		background: #ecf0f1;
+		margin-bottom: 15px;
+		padding: 15px;
+		/* background: red; */
+	}
+
+	.create-task--taskInfo {
+		grid-area: taskInfo;
+		/* background: blue; */
+	}
+
+	.create-task--left-panel {
+		padding: 15px;
+		padding-top: 0px;
+	}
+
+	.create-task--left-panel input {
+		width: 100%;
+		margin-top: 10px;
+	}
+
+	.create-task--assign {
+		grid-area: assign;
+		/* background: pink; */
+		/* padding: 15px; */
+	}
+
+	.create-task--right-panel {
+		padding: 15px;
+		padding-top: 0px;
+	}
+
+	.create-task--left-panel ul {
+		margin-top: 10px;
+	}
+	.create-task--right-panel label {
+		font-size: 20px;
+		margin-bottom: 10px;
+		font-weight: 600;
+	}
+
+	.create-task-control-group {
+		margin-top: 18px;
+	}
+
+	.create-task-control-group:first-child {
+		margin-top: 0px;
+	}
+
+	.create-task--left-panel label {
+		font-size: 20px;
+		margin-bottom: 10px;
+		font-weight: 600;
+	}
+
+	.create-task--left-panel input {
+		height: 40px;
+		padding: 5px;
+		font-size: 20px;
+		margin-top: 10px;
+	}
+
+	.create-task--left-panel textarea {
+		width: 100%;
+		height: 40px;
+		padding: 5px;
+		font-size: 20px;
+		margin-top: 10px;
+	}
+
+	.create-task--assign-pit {
+		overflow-y: scroll;
+		height: 56%;
+		-moz-box-shadow: inset 0 0 5px #000000;
+		-webkit-box-shadow: inset 0 0 5px #000000;
+		box-shadow: inset 0 0 5px #000000;
+		padding: 15px;
+		margin-top: 10px;
+	}
+
+	.create-task--assign li {
+		list-style-type: none;
+		margin: 5px 0px;
+	}
+
+	.create-task--selector {
+		width: 100%;
+	}
+
+	.create-task--footer {
+		grid-area: footer;
+		background: #ecf0f1;
+	}
+
+	.create-task--button-group {
+		margin-top: 10px;
+		margin-right: 15px;
+		float: right;
+	}
+
+	.create-task--create-btn {
+		all: unset;
+		cursor: pointer;
+		background: #2ecc71;
+		padding: 10px;
+		border-radius: 5px;
+		color: white;
+		font-size: 16px;
+		font-weight: 600;
+	}
+
+	.create-task--create-btn:hover {
+		background: #28b161;
+	}
+
+	.create-task--cancel-btn {
+		all: unset;
+		cursor: pointer;
+		/* background: #2ecc71; */
+		padding: 10px;
+		border-radius: 5px;
+		color: black;
+		font-size: 16px;
+		/* font-weight: 600; */
+	}
+
+	.create-task--cancel-btn:hover {
+		background: #00000011;
+	}
+</style>
+<div class="create-task--card">
+	<div class="create-task--header">
+		<h2>Create Task</h2>
+	</div>
+
+	<div class="create-task--taskInfo">
+		<form class="create-task--left-panel">
+			<div class="create-task-control-group">
+				<label class="" for="textinput">Task Name</label>
+				<div class="">
+					<input
+						id="textinput"
+						name="textinput"
+						type="text"
+						placeholder="Build a dog house"
+						class="form-control input-md"
+					/>
+				</div>
+			</div>
+
+			<div class="create-task-control-group">
+				<label class="col-md-4 control-label" for="textarea"
+					>Definition of Done</label
+				>
+				<textarea id="textarea" name="textarea">
+follow the dog house plans</textarea
+				>
+			</div>
+			<!-- Textarea -->
+			<div class="create-task-control-group">
+				<label class="col-md-4 control-label" for="textarea"
+					>Task Description</label
+				>
+				<textarea id="textarea" name="textarea">
+follow the dog house plans</textarea
+				>
+			</div>
+			<!-- Select Multiple -->
+			<div class="create-task-control-group">
+				<label class="col-md-4 control-label" for="selectmultiple"
+					>Due Date</label
+				>
+				<div class="col-md-6">
+					<input
+						class="form-control"
+						type="date"
+						value="2019-02-08"
+						id="due-date-input"
+					/>
+				</div>
+			</div>
+		</form>
+	</div>
+	<div class="create-task--assign">
+		<div class="create-task--right-panel">
+			<div class="create-task-control-group">
+				<label class="">Assign</label>
+				<div class="create-task--assign-pit">
+					<ul>
+						<li><i class="far fa-square"></i> Heath Campbell</li>
+						<li><i class="far fa-square"></i> Beef Campbell</li>
+						<li><i class="far fa-square"></i> Keath Campbell</li>
+						<li><i class="far fa-square"></i> Heath Campbell</li>
+						<li><i class="far fa-square"></i> Beef Campbell</li>
+						<li><i class="far fa-square"></i> Keath Campbell</li>
+						<li><i class="far fa-square"></i> Heath Campbell</li>
+						<li><i class="far fa-square"></i> Beef Campbell</li>
+						<li><i class="far fa-square"></i> Keath Campbell</li>
+						<li><i class="far fa-square"></i> Heath Campbell</li>
+						<li><i class="far fa-square"></i> Beef Campbell</li>
+						<li><i class="far fa-square"></i> Keath Campbell</li>
+						<li><i class="far fa-square"></i> Heath Campbell</li>
+						<li><i class="far fa-square"></i> Beef Campbell</li>
+						<li><i class="far fa-square"></i> Keath Campbell</li>
+						<li><i class="far fa-square"></i> Heath Campbell</li>
+						<li><i class="far fa-square"></i> Beef Campbell</li>
+						<li><i class="far fa-square"></i> Keath Campbell</li>
+						<li><i class="far fa-square"></i> Heath Campbell</li>
+						<li><i class="far fa-square"></i> Beef Campbell</li>
+						<li><i class="far fa-square"></i> Keath Campbell</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="create-task--footer">
+		<div class="create-task--button-group">
+			<button
+				id="button2id"
+				name="button2id"
+				class="create-task--cancel-btn"
+			>
+				Cancel
+			</button>
+			<button
+				id="button1id"
+				name="button1id"
+				class="create-task--create-btn"
+			>
+				<i class="fas fa-plus"></i> Create
+			</button>
+		</div>
+	</div>
+</div>
