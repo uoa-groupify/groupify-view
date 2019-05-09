@@ -1,0 +1,44 @@
+<style>
+	.project-card {
+		background: white;
+		padding: 0px;
+		margin: 50px;
+	}
+	.project {
+		/* height: 500px; */
+		display: grid;
+		grid-template-areas:
+			"title title feedback todo "
+			"info info feedback todo"
+			"info info feedback todo";
+	}
+
+	.project-title {
+		grid-area: title;
+
+		background: green;
+	}
+
+	.project-info {
+		grid-area: info;
+		background: yellow;
+	}
+
+	.project-feedback {
+		grid-area: feedback;
+		background: blue;
+	}
+
+	.project-todo {
+		grid-area: todo;
+		background: red;
+	}
+</style>
+<div class="project-card z-depth-2">
+	<div class="project">
+		<div class="project-title">a</div>
+		<div class="project-info">b</div>
+		<div class="project-feedback">c</div>
+		<div class="project-todo">d</div>
+	</div>
+</div>
