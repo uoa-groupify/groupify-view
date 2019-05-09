@@ -9,13 +9,13 @@
 	.task-manager {
 		width: calc(100% - 170px);
 		height: 1000px;
-		background: red;
+		/* background: red; */
 	}
 
 	.task-manager--tool-bar {
-		height: 70px;
+		height: 40px;
 		margin: 10px 0px;
-		background: blue;
+		/* background: blue; */
 	}
 
 	.task-manager--project-dropdown {
@@ -26,14 +26,151 @@
 		display: none;
 		position: absolute;
 		background-color: #f9f9f9;
-		min-width: 160px;
+		min-width: 260px;
 		box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 		z-index: 1;
+	}
+
+	.task-manager--project-dropdown-content ul li {
+		min-width: 260px;
+		/* height: 50px; */
+		text-align: center;
+		padding: 15px;
+		font-size: 20px;
+		cursor: pointer;
+	}
+
+	.task-manager--project-dropdown-content ul li:hover {
+		background: red;
+		cursor: pointer;
 	}
 
 	.task-manager--project-dropdown:hover
 		.task-manager--project-dropdown-content {
 		display: block;
+	}
+
+	.task-manager--project-dropdown-btn {
+		background: #3498db;
+		padding: 15px;
+		font-size: 20px;
+		/* border-radius: 5px; */
+		min-width: 260px;
+		text-align: center;
+	}
+
+	.task-manager--end-sprint-btn {
+		height: 50px;
+	}
+
+	.task-manager--tasks {
+		/* background: red; */
+		height: 100%;
+		width: 100%;
+		margin-top: 50px;
+		display: grid;
+		grid-template-columns: auto auto auto auto auto;
+		grid-column-gap: 20px;
+	}
+
+	/* .task-manager--tasks div {
+		background: pink; 
+		height: 500px;
+		width: 100%;
+	} */
+
+	.task-manager--tasks-heading {
+		font-size: 24px;
+		text-align: center;
+		padding-bottom: 5px;
+		margin-top: 10px;
+		font-weight: 500;
+		border-bottom: 2px solid black;
+	}
+
+	.task-manager--stickynote {
+		margin-top: 20px;
+		padding: 10px;
+
+		border: 1px solid #e8e8e8;
+
+		transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+		font-size: 22px;
+		cursor: pointer;
+
+		background: #ffff88; /* Old browsers */
+		background: -moz-linear-gradient(
+			-45deg,
+			#ffff88 81%,
+			#ffff88 82%,
+			#ffff88 82%,
+			#ffffc6 100%
+		); /* FF3.6+ */
+		background: -webkit-gradient(
+			linear,
+			left top,
+			right bottom,
+			color-stop(81%, #ffff88),
+			color-stop(82%, #ffff88),
+			color-stop(82%, #ffff88),
+			color-stop(100%, #ffffc6)
+		); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(
+			-45deg,
+			#ffff88 81%,
+			#ffff88 82%,
+			#ffff88 82%,
+			#ffffc6 100%
+		); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(
+			-45deg,
+			#ffff88 81%,
+			#ffff88 82%,
+			#ffff88 82%,
+			#ffffc6 100%
+		); /* Opera 11.10+ */
+		background: -ms-linear-gradient(
+			-45deg,
+			#ffff88 81%,
+			#ffff88 82%,
+			#ffff88 82%,
+			#ffffc6 100%
+		); /* IE10+ */
+		background: linear-gradient(
+			135deg,
+			#ffff88 81%,
+			#ffff88 82%,
+			#ffff88 82%,
+			#ffffc6 100%
+		); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff88', endColorstr='#ffffc6',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	}
+
+	.task-manager--stickynote:hover {
+		cursor: move;
+		box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+			0 10px 10px rgba(0, 0, 0, 0.22);
+	}
+
+	.task-manager--tasks-column {
+		background: #ecf0f1;
+		padding: 15px;
+	}
+
+	.blue {
+		color: #3498db;
+		font-style: normal;
+	}
+
+	.green {
+		color: #2ecc71;
+		font-style: normal;
+	}
+
+	.darkBlue {
+		color: #34495e;
+		font-style: normal;
 	}
 </style>
 
@@ -41,7 +178,9 @@
 	.
 	<div class="task-manager--tool-bar">
 		<div class="task-manager--project-dropdown">
-			Dropdown
+			<div class="task-manager--project-dropdown-btn">
+				<i class="fas fa-caret-down"></i> Project Name
+			</div>
 			<div class="task-manager--project-dropdown-content">
 				<ul>
 					<li>Project One</li>
@@ -49,6 +188,98 @@
 					<li>Project Three</li>
 				</ul>
 			</div>
+		</div>
+
+		<!-- <div class="task-manager--circle"><i class="fas fa-2x fa-plus"></i></div> -->
+		<div class="task-manager--end-sprint-btn">
+			<!-- End Sprint -->
+		</div>
+	</div>
+	<div class="task-manager--tasks">
+		<div class="task-manager--tasks-column">
+			<div class="task-manager--tasks-heading">BackLog</div>
+			<div class="task-manager--stickynote">
+				<h3>Task Name</h3>
+				<br />
+				<p>
+					<i class="blue">HC</i> <i class="darkBlue">AC</i>
+					<i class="green">ZM</i>
+				</p>
+				<br />
+				<h5>Due in 5 days</h5>
+			</div>
+			<div class="task-manager--stickynote">
+				<h3>Task Name</h3>
+				<br />
+				<p>
+					<i class="blue">HC</i> <i class="darkBlue">AC</i>
+					<i class="green">ZM</i>
+				</p>
+				<br />
+				<h5>Due in 5 days</h5>
+			</div>
+			<div class="task-manager--stickynote">
+				<h3>Task Name</h3>
+				<br />
+				<p>
+					<i class="blue">HC</i> <i class="darkBlue">AC</i>
+					<i class="green">ZM</i>
+				</p>
+				<br />
+				<h5>Due in 5 days</h5>
+			</div>
+		</div>
+		<div class="task-manager--tasks-column">
+			<div class="task-manager--tasks-heading">To Do</div>
+			<div class="task-manager--stickynote">
+				<h3>Task Name</h3>
+				<br />
+				<p>
+					<i class="blue">HC</i> <i class="darkBlue">AC</i>
+					<i class="green">ZM</i>
+				</p>
+				<br />
+				<h5>Due in 5 days</h5>
+			</div>
+		</div>
+		<div class="task-manager--tasks-column">
+			<div class="task-manager--tasks-heading">Doing</div>
+			<div class="task-manager--stickynote">
+				<h3>Task Name</h3>
+				<br />
+				<p>
+					<i class="blue">HC</i> <i class="darkBlue">AC</i>
+					<i class="green">ZM</i>
+				</p>
+				<br />
+				<h5>Due in 5 days</h5>
+			</div>
+			<div class="task-manager--stickynote">
+				<h3>Task Name</h3>
+				<br />
+				<p>
+					<i class="blue">HC</i> <i class="darkBlue">AC</i>
+					<i class="green">ZM</i>
+				</p>
+				<br />
+				<h5>Due in 5 days</h5>
+			</div>
+		</div>
+		<div class="task-manager--tasks-column">
+			<div class="task-manager--tasks-heading">Review</div>
+			<div class="task-manager--stickynote">
+				<h3>Task Name</h3>
+				<br />
+				<p>
+					<i class="blue">HC</i> <i class="darkBlue">AC</i>
+					<i class="green">ZM</i>
+				</p>
+				<br />
+				<h5>Due in 5 days</h5>
+			</div>
+		</div>
+		<div class="task-manager--tasks-column">
+			<div class="task-manager--tasks-heading">Done</div>
 		</div>
 	</div>
 </div>
