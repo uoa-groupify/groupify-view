@@ -6,21 +6,21 @@
 		margin: 0px;
 	}
 
-	.create-task--card {
+	.edit-task--card {
 		width: 800px;
-		height: 500px;
+		height: 650px;
 		/* background: #ecf0f1; */
 		display: grid;
-		grid-template-rows: 1fr 3fr 3fr 1fr;
+		grid-template-rows: 0.6fr 3fr 3fr 0.7fr;
 		font-size: 20px;
 		grid-template-areas:
 			"header header header header header header"
-			"taskInfo taskInfo taskInfo assign assign assign"
-			"taskInfo taskInfo taskInfo assign assign assign"
+			"taskInfo assign assign assign assign assign"
+			"taskInfo assign assign assign assign assign"
 			"footer footer footer footer footer footer";
 	}
 
-	.create-task--header {
+	.edit-task--header {
 		grid-area: header;
 		background: #ecf0f1;
 		margin-bottom: 15px;
@@ -28,38 +28,55 @@
 		/* background: red; */
 	}
 
-	.create-task--taskInfo {
+	.edit-task--attach-btn {
+		all: unset;
+		cursor: pointer;
+		background: #3498db;
+		padding: 10px;
+		border-radius: 5px;
+		color: white;
+		font-size: 16px;
+		font-weight: 600;
+		float: right;
+		margin-top: -40px;
+	}
+
+	.edit-task--attach-btn:hover {
+		background: #297ab1;
+	}
+
+	.edit-task--taskInfo {
 		grid-area: taskInfo;
 		/* background: blue; */
 	}
 
-	.create-task--left-panel {
+	.edit-task--left-panel {
 		padding: 15px;
 		padding-bottom: 0px;
 		padding-top: 0px;
 		border-right: 1px solid #ecf0f1;
 	}
 
-	.create-task--left-panel input {
+	.edit-task--left-panel input {
 		width: 100%;
 		margin-top: 10px;
 	}
 
-	.create-task--assign {
+	.edit-task--assign {
 		grid-area: assign;
 		/* background: pink; */
 		/* padding: 15px; */
 	}
 
-	.create-task--right-panel {
+	.edit-task--right-panel {
 		padding: 15px;
 		padding-top: 0px;
 	}
 
-	.create-task--left-panel ul {
+	.edit-task--left-panel ul {
 		margin-top: 10px;
 	}
-	.create-task--right-panel label {
+	.edit-task--right-panel label {
 		font-size: 20px;
 		margin-bottom: 10px;
 		font-weight: 600;
@@ -73,20 +90,20 @@
 		margin-top: 0px;
 	}
 
-	.create-task--left-panel label {
+	.edit-task--left-panel label {
 		font-size: 20px;
 		margin-bottom: 10px;
 		font-weight: 600;
 	}
 
-	.create-task--left-panel input {
+	.edit-task--left-panel input {
 		height: 40px;
 		padding: 5px;
 		font-size: 20px;
 		margin-top: 10px;
 	}
 
-	.create-task--left-panel textarea {
+	.edit-task--left-panel textarea {
 		width: 100%;
 		height: 40px;
 		padding: 5px;
@@ -94,9 +111,9 @@
 		margin-top: 10px;
 	}
 
-	.create-task--assign-pit {
+	.edit-task--comment-pit {
 		overflow-y: scroll;
-		height: 56%;
+		height: 50%;
 		-moz-box-shadow: inset 0 0 5px #000000;
 		-webkit-box-shadow: inset 0 0 5px #000000;
 		box-shadow: inset 0 0 5px #000000;
@@ -104,27 +121,42 @@
 		margin-top: 10px;
 	}
 
-	.create-task--assign li {
+	.edit-task--comment-pit li {
 		list-style-type: none;
 		margin: 5px 0px;
 	}
 
-	.create-task--selector {
+	.edit-task--assign-pit {
+		overflow-y: scroll;
+		height: 10%;
+		-moz-box-shadow: inset 0 0 5px #000000;
+		-webkit-box-shadow: inset 0 0 5px #000000;
+		box-shadow: inset 0 0 5px #000000;
+		padding: 15px;
+		margin-top: 10px;
+	}
+
+	.edit-task--assign-pit li {
+		list-style-type: none;
+		margin: 5px 0px;
+	}
+
+	.edit-task--selector {
 		width: 100%;
 	}
 
-	.create-task--footer {
+	.edit-task--footer {
 		grid-area: footer;
 		background: #ecf0f1;
 	}
 
-	.create-task--button-group {
+	.edit-task--button-group {
 		margin-top: 10px;
 		margin-right: 15px;
 		float: right;
 	}
 
-	.create-task--create-btn {
+	.edit-task--create-btn {
 		all: unset;
 		cursor: pointer;
 		background: #2ecc71;
@@ -135,11 +167,11 @@
 		font-weight: 600;
 	}
 
-	.create-task--create-btn:hover {
+	.edit-task--create-btn:hover {
 		background: #28b161;
 	}
 
-	.create-task--cancel-btn {
+	.edit-task--cancel-btn {
 		all: unset;
 		cursor: pointer;
 		/* background: #2ecc71; */
@@ -150,24 +182,53 @@
 		/* font-weight: 600; */
 	}
 
-	.create-task--cancel-btn:hover {
+	.edit-task--cancel-btn:hover {
 		background: #00000011;
 	}
 
-	.create-task--task-id {
+	.edit-task--comment-box {
+	}
+
+	.edit-task--comment-box input {
+		width: 100%;
+		height: 40px;
+		padding: 5px;
+		font-size: 20px;
+		margin-top: 10px;
+	}
+
+	.edit-task--task-id {
 		color: #bdc3c7;
 		float: left;
 		margin-top: 7px;
 		margin-right: 520px;
 	}
+
+	.edit-task--send-btn {
+		all: unset;
+		cursor: pointer;
+		background: #2ecc71;
+		padding: 10px;
+		border-radius: 5px;
+		color: white;
+		font-size: 16px;
+		font-weight: 600;
+		width: calc(100% - 20px);
+		margin-top: 10px;
+		text-align: center;
+	}
 </style>
-<div class="create-task--card">
-	<div class="create-task--header">
-		<h2>Create Task</h2>
+<div class="edit-task--card">
+	<div class="edit-task--header">
+		<h2>Edit Task</h2>
+
+		<button id="button1id" name="button1id" class="edit-task--attach-btn">
+			<i class="fas fa-paperclip"></i> Attach File
+		</button>
 	</div>
 
-	<div class="create-task--taskInfo">
-		<form class="create-task--left-panel">
+	<div class="edit-task--taskInfo">
+		<form class="edit-task--left-panel">
 			<div class="create-task-control-group">
 				<label class="" for="textinput">Task Name</label>
 				<div class="">
@@ -212,13 +273,9 @@ follow the dog house plans</textarea
 					/>
 				</div>
 			</div>
-		</form>
-	</div>
-	<div class="create-task--assign">
-		<div class="create-task--right-panel">
 			<div class="create-task-control-group">
 				<label class="">Assign</label>
-				<div class="create-task--assign-pit">
+				<div class="edit-task--assign-pit">
 					<ul>
 						<li><i class="far fa-square"></i> Heath Campbell</li>
 						<li><i class="far fa-square"></i> Beef Campbell</li>
@@ -244,26 +301,50 @@ follow the dog house plans</textarea
 					</ul>
 				</div>
 			</div>
+		</form>
+	</div>
+	<div class="edit-task--assign">
+		<div class="edit-task--right-panel">
+			<label class="">Comments and uploads</label>
+			<div class="edit-task--comment-pit">
+				<ul>
+					<li>
+						<b
+							>Justin Kim uploaded a file "CompSci 345.doc"(<a href="#"
+								>Download</a
+							>)</b
+						>
+					</li>
+					<li>
+						<span>Heath Campbell:</span> I think there should be less
+						color
+					</li>
+				</ul>
+			</div>
+			<div class="edit-task--comment-box">
+				<input
+					id="textinput"
+					name="textinput"
+					type="text"
+					placeholder="Build a dog house"
+					class="form-control input-md"
+				/>
+				<button id="button1id" name="button1id" class="edit-task--send-btn">
+					<i class="fas fa-paper-plane"></i> Send
+				</button>
+			</div>
 		</div>
 	</div>
-	<div class="create-task--footer">
-		<div class="create-task--button-group">
-			<div class="create-task--task-id">
+	<div class="edit-task--footer">
+		<div class="edit-task--button-group">
+			<div class="edit-task--task-id">
 				<span>#F41AB3</span>
 			</div>
-			<button
-				id="button2id"
-				name="button2id"
-				class="create-task--cancel-btn"
-			>
+			<button id="button2id" name="button2id" class="edit-task--cancel-btn">
 				Cancel
 			</button>
-			<button
-				id="button1id"
-				name="button1id"
-				class="create-task--create-btn"
-			>
-				<i class="fas fa-plus"></i> Create
+			<button id="button1id" name="button1id" class="edit-task--create-btn">
+				<i class="fas fa-sync"></i> Update
 			</button>
 		</div>
 	</div>
