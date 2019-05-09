@@ -5,21 +5,27 @@
 		margin: 50px;
 	}
 	.project {
-		/* height: 500px; */
+		height: 600px;
 		display: grid;
 		grid-template-areas:
-			"title title feedback todo "
-			"info info feedback todo"
-			"info info feedback todo";
+			"title title feedback feedback todo todo"
+			"info info feedback feedback todo todo"
+			"info info feedback feedback todo todo"
+			"info info feedback feedback todo todo";
+	}
+
+	.project div {
 	}
 
 	.project-title {
 		grid-area: title;
+		padding: 10px;
 
-		background: green;
+		/* background: green; */
 	}
 
 	.project-info {
+		padding: 10px;
 		grid-area: info;
 		background: yellow;
 	}
@@ -33,12 +39,114 @@
 		grid-area: todo;
 		background: red;
 	}
+
+	.collection {
+		margin: 0px;
+	}
 </style>
 <div class="project-card z-depth-2">
 	<div class="project">
-		<div class="project-title">a</div>
-		<div class="project-info">b</div>
-		<div class="project-feedback">c</div>
-		<div class="project-todo">d</div>
+		<div class="project-title">
+			<h4>Project Name</h4>
+		</div>
+		<div class="project-info">
+			<p>This project is due on the 3rd</p>
+		</div>
+		<div class="project-feedback">
+			<ul class="collection">
+				<li class="collection-item avatar">
+					<i class="material-icons circle">folder</i>
+					<span class="title">Title</span>
+					<p>
+						First Line <br />
+						Second Line
+					</p>
+					<a href="#!" class="secondary-content"
+						><i class="material-icons">grade</i></a
+					>
+				</li>
+				<li class="collection-item avatar">
+					<i class="material-icons circle">folder</i>
+					<span class="title">Title</span>
+					<p>
+						First Line <br />
+						Second Line
+					</p>
+					<a href="#!" class="secondary-content"
+						><i class="material-icons">grade</i></a
+					>
+				</li>
+				<li class="collection-item avatar">
+					<i class="material-icons circle green">insert_chart</i>
+					<span class="title">Title</span>
+					<p>
+						First Line <br />
+						Second Line
+					</p>
+					<a href="#!" class="secondary-content"
+						><i class="material-icons">grade</i></a
+					>
+				</li>
+				<li class="collection-item avatar">
+					<i class="material-icons circle red">play_arrow</i>
+					<span class="title">Title</span>
+					<p>
+						First Line <br />
+						Second Line
+					</p>
+					<a href="#!" class="secondary-content"
+						><i class="material-icons">grade</i></a
+					>
+				</li>
+			</ul>
+		</div>
+		<div class="project-todo">
+			<ul class="collection">
+				<li class="collection-item avatar">
+					<i class="material-icons circle">folder</i>
+					<span class="title">Title</span>
+					<p>
+						First Line <br />
+						Second Line
+					</p>
+					<a href="#!" class="secondary-content"
+						><i class="material-icons">grade</i></a
+					>
+				</li>
+				<li class="collection-item avatar">
+					<i class="material-icons circle">folder</i>
+					<span class="title">Title</span>
+					<p>
+						First Line <br />
+						Second Line
+					</p>
+					<a href="#!" class="secondary-content"
+						><i class="material-icons">grade</i></a
+					>
+				</li>
+				<li class="collection-item avatar">
+					<i class="material-icons circle green">insert_chart</i>
+					<span class="title">Title</span>
+					<p>
+						First Line <br />
+						Second Line
+					</p>
+					<a href="#!" class="secondary-content"
+						><i class="material-icons">grade</i></a
+					>
+				</li>
+				<li class="collection-item avatar">
+					<i class="material-icons circle red">play_arrow</i>
+					<span class="title">Title</span>
+					<p>
+						First Line <br />
+						Second Line
+					</p>
+					<a href="#!" class="secondary-content"
+						><i class="material-icons">grade</i></a
+					>
+				</li>
+			</ul>
+		</div>
 	</div>
 </div>
