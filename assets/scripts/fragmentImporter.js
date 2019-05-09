@@ -20,6 +20,7 @@ function insertFragments(element) {
 				$(this)
 					.children(":first")
 					.unwrap();
+				insertFragments(this);
 			}
 		);
 	});

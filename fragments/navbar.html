@@ -1,29 +1,24 @@
-<nav class="main-nav nav">
-	<div class="main-nav-top">
-		<div>
-			<img
-				class="logo"
-				src="../assets/images/logo.png"
-				alt="Groupify logo"
-			/>
-		</div>
-		<div id="searchbar-outter">
-			<input id="searchbar" placeholder="search..." />
-		</div>
-		<ul class="nav profile-nav">
-			<li>Zoe Mills</li>
-			<li><i class="fas fa-cogs"></i> Settings</li>
-		</ul>
-	</div>
+<ul id="tabs-swipe-demo" class="tabs">
+	<li class="tab col s3"><a href="#test-swipe-1">Test 1</a></li>
+	<li class="tab col s3"><a class="active" href="#test-swipe-2">Test 2</a></li>
+	<li class="tab col s3"><a href="#test-swipe-3">Test 3</a></li>
+</ul>
+<div id="test-swipe-1" class="col s12 blue">
+	<Fragment name="dashboard"></Fragment>
+</div>
+<div id="test-swipe-2" class="col s12 red">Test 2</div>
+<div id="test-swipe-3" class="col s12 green">Test 3</div>
 
-	<div class="main-nav-bottom">
-		<ul class="nav tabs">
-			<li class="active">Dashboard</li>
-			<li>People</li>
-			<li>Calander</li>
-			<li>Dropbox</li>
-			<li>Tasks</li>
-			<li>Chat</li>
-		</ul>
-	</div>
-</nav>
+<style>
+	.carousel .carousel-item {
+		width: 100%;
+	}
+</style>
+<script>
+	$(document).ready(function() {
+		$("#tabs-swipe-demo").tabs({
+			swipeable: true,
+			responsiveThreshold: 1920
+		});
+	});
+</script>

@@ -2,6 +2,14 @@
 	<head>
 		<title></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Compiled and minified CSS -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css"
+		/>
+
+		<!-- Compiled and minified JavaScript -->
+
 		<link rel="stylesheet" href="../assets/styles/main.css" />
 		<link
 			rel="stylesheet"
@@ -9,14 +17,12 @@
 			integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
 			crossorigin="anonymous"
 		/>
-		<script
-			src="https://unpkg.com/@material-ui/core/umd/material-ui.production.min.js"
-			crossorigin="anonymous"
-		></script>
 	</head>
 	<body onload="insertFragments(this);">
 		<Fragment name="navbar"></Fragment>
+		<Fragment name="dashboard"></Fragment>
 	</body>
 	<script src="../assets/scripts/fragmentImporter.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
 </html>
