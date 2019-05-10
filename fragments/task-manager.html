@@ -80,7 +80,7 @@
 	}
 
 	/* .task-manager--tasks div {
-		background: pink; 
+		background: pink;
 		height: 500px;
 		width: 100%;
 	} */
@@ -178,6 +178,33 @@
 		color: #34495e;
 		font-style: normal;
 	}
+
+	.task-manager--project-add-task {
+		position: relative;
+		display: inline-block;
+		color: white;
+	}
+
+	.task-manager--project-dropdown-btn {
+		background: #3498db;
+		padding: 15px;
+		font-size: 20px;
+		/* border-radius: 5px; */
+		min-width: 260px;
+		text-align: center;
+	}
+
+	.pointer {
+		cursor: pointer;
+	}
+
+	.pull-right {
+		float: right;
+	}
+
+	.add-task-btn {
+		background: #2ecc71;
+	}
 </style>
 
 <div class="task-manager">
@@ -195,7 +222,29 @@
 			</div>
 		</div>
 
-		<div></div>
+		<div class=" task-manager--project-dropdown">
+			<div class=" add-task-btn task-manager--project-dropdown-btn pointer">
+				<i class="fas fa-1x fa-plus"></i> Add Task
+			</div>
+		</div>
+
+		<!-- <div class="task-manager--project-dropdown pull-right">
+			<div class=" task-manager--project-dropdown-btn pointer">
+				<i class="fas fa-1x fa-times"></i> End Sprint
+			</div>
+		</div> -->
+
+		<div class="task-manager--project-dropdown pull-right">
+			<div class=" task-manager--project-dropdown-btn pointer">
+				<i class="fas fa-1x fa-running"></i> Sprint
+			</div>
+			<div class="task-manager--project-dropdown-content pull-right">
+				<ul>
+					<li>End Sprint</li>
+					<li>View Last Sprints</li>
+				</ul>
+			</div>
+		</div>
 	</div>
 	<div class="task-manager--tasks">
 		<div class="task-manager--tasks-column">
