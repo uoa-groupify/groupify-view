@@ -21,6 +21,7 @@
 	.task-manager--project-dropdown {
 		position: relative;
 		display: inline-block;
+		color: white;
 	}
 	.task-manager--project-dropdown-content {
 		display: none;
@@ -31,6 +32,10 @@
 		z-index: 1;
 	}
 
+	.task-manager--project-dropdown-content ul {
+		list-style-type: none;
+	}
+
 	.task-manager--project-dropdown-content ul li {
 		min-width: 260px;
 		/* height: 50px; */
@@ -38,10 +43,11 @@
 		padding: 15px;
 		font-size: 20px;
 		cursor: pointer;
+		color: black;
 	}
 
 	.task-manager--project-dropdown-content ul li:hover {
-		background: red;
+		background: #bdc3c7;
 		cursor: pointer;
 	}
 
