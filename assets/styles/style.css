@@ -1,5 +1,5 @@
 body {
-    background-color: white;
+    background-color: whitesmoke;
 }
 
 .sidenav {
@@ -107,7 +107,7 @@ hr {
     margin-top: -87px;
     margin-left: -20px;
     height: 82px;
-    width: 89%;
+    width: 91%;
     background-color: white;
     position: fixed;
 }
