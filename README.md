@@ -1,8 +1,10 @@
 # groupify-view
+This is a project from CompSci 345 @ University of Auckland.
+We were told to make a protype for a system to help students 
+work in groups.
 
-The website from the design
+## Source
+[https://github.com/uoa-groupify/groupify-view](https://github.com/uoa-groupify/groupify-view)
 
-All pages are within the ./pages folder
-It's also hosted online
-
+## View
 [View live](https://groupify-compsci345.netlify.com/pages/)
