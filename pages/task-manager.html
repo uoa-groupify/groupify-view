@@ -1,13 +1,13 @@
 <html>
 	<head>
 		<title>Groupify Tasks</title>
-		<link
+		<!-- <link
 			rel="stylesheet"
 			href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
 			integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
 			crossorigin="anonymous"
-		/>
-		<link rel="stylesheet" href="../style.css" />
+		/> -->
+		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body onload="insertFragments(this);">
 		<div class="sidenav">
@@ -24,6 +24,13 @@
 			<div class="main-content" style="all: unset;">
 				<Fragment name="task-manager"></Fragment>
 			</div>
+		</div>
+		<!-- <Fragment name="create-task"></Fragment> -->
+		<div id="create-task-toggle" style="display: none">
+			<Fragment name="create-task"></Fragment>
+		</div>
+		<div id="edit-task-toggle" style="display: none">
+			<Fragment name="edit-task"></Fragment>
 		</div>
 	</body>
 	<script src="../assets/scripts/fragmentImporter.js"></script>

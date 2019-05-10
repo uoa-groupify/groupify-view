@@ -207,6 +207,46 @@
 	}
 </style>
 
+<script>
+	function addTaskToggle() {
+		console.log("click");
+		if ($("#create-task-toggle").css("display") == "none")
+			$("#create-task-toggle").css("display", "block");
+		else $("#create-task-toggle").css("display", "none");
+	}
+
+	function addEditToggle() {
+		console.log("click");
+		if ($("#edit-task-toggle").css("display") == "none")
+			$("#edit-task-toggle").css("display", "block");
+		else $("#edit-task-toggle").css("display", "none");
+	}
+	setTimeout(() => {
+		//create screen
+		$("#add-task").on("click", function() {
+			addTaskToggle();
+		});
+		$("#button2id").on("click", function() {
+			addTaskToggle();
+		});
+		$("#button1id").on("click", function() {
+			addTaskToggle();
+		});
+
+		$(".task-manager--stickynote").on("click", function() {
+			addEditToggle();
+		});
+
+		$("#button3id").on("click", function() {
+			addEditToggle();
+		});
+
+		$("#button4id").on("click", function() {
+			addEditToggle();
+		});
+	}, 1000);
+</script>
+
 <div class="task-manager">
 	<div class="task-manager--tool-bar">
 		<div class="task-manager--project-dropdown">
@@ -223,7 +263,10 @@
 		</div>
 
 		<div class=" task-manager--project-dropdown">
-			<div class=" add-task-btn task-manager--project-dropdown-btn pointer">
+			<div
+				id="add-task"
+				class=" add-task-btn task-manager--project-dropdown-btn pointer"
+			>
 				<i class="fas fa-1x fa-plus"></i> Add Task
 			</div>
 		</div>
@@ -334,5 +377,3 @@
 		</div>
 	</div>
 </div>
-
-<script></script>
