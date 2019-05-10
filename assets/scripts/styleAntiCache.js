@@ -16,4 +16,4 @@ function loadjscssfile(filename, filetype) {
 
 var date = new Date();
 var timestamp = date.getTime();
-loadjscssfile("./assets/styles/style.css?timestamp=" + timestamp, "css");
+loadjscssfile("../assets/styles/style.css?timestamp=" + timestamp, "css");
