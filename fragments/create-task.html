@@ -7,6 +7,7 @@
 	}
 
 	.create-task--card {
+		background: white;
 		width: 800px;
 		height: 500px;
 		/* background: #ecf0f1; */
@@ -18,6 +19,12 @@
 			"taskInfo taskInfo taskInfo assign assign assign"
 			"taskInfo taskInfo taskInfo assign assign assign"
 			"footer footer footer footer footer footer";
+		position: relative;
+		background-color: #fefefe;
+		margin: auto;
+		padding: 0;
+		/* width: 90%; */
+		max-width: 1200px;
 	}
 
 	.create-task--header {
@@ -25,6 +32,7 @@
 		background: #ecf0f1;
 		margin-bottom: 15px;
 		padding: 15px;
+
 		/* background: red; */
 	}
 
@@ -156,115 +164,131 @@
 
 	.create-task--task-id {
 		color: #bdc3c7;
+
 		float: left;
 		margin-top: 7px;
 		margin-right: 520px;
 	}
+
+	.modal {
+		display: block;
+		position: fixed;
+		z-index: 1;
+		padding-top: 100px;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		background-color: rgba(0, 0, 0, 0.6);
+	}
 </style>
-<div class="create-task--card">
-	<div class="create-task--header">
-		<h2>Create Task</h2>
-	</div>
+<div class="modal">
+	<div class="create-task--card">
+		<div class="create-task--header">
+			<h2>Create Task</h2>
+		</div>
 
-	<div class="create-task--taskInfo">
-		<form class="create-task--left-panel">
-			<div class="create-task-control-group">
-				<label class="" for="textinput">Task Name</label>
-				<div class="">
-					<input
-						id="textinput"
-						name="textinput"
-						type="text"
-						placeholder="Build a dog house"
-						class="form-control input-md"
-					/>
+		<div class="create-task--taskInfo">
+			<form class="create-task--left-panel">
+				<div class="create-task-control-group">
+					<label class="" for="textinput">Task Name</label>
+					<div class="">
+						<input
+							id="textinput"
+							name="textinput"
+							type="text"
+							placeholder="Build a dog house"
+							class="form-control input-md"
+						/>
+					</div>
 				</div>
-			</div>
 
-			<div class="create-task-control-group">
-				<label class="col-md-4 control-label" for="textarea"
-					>Definition of Done</label
-				>
-				<textarea id="textarea" name="textarea">
+				<div class="create-task-control-group">
+					<label class="col-md-4 control-label" for="textarea"
+						>Definition of Done</label
+					>
+					<textarea id="textarea" name="textarea">
 follow the dog house plans</textarea
-				>
-			</div>
-			<!-- Textarea -->
-			<div class="create-task-control-group">
-				<label class="col-md-4 control-label" for="textarea"
-					>Task Description</label
-				>
-				<textarea id="textarea" name="textarea">
-follow the dog house plans</textarea
-				>
-			</div>
-			<!-- Select Multiple -->
-			<div class="create-task-control-group">
-				<label class="col-md-4 control-label" for="selectmultiple"
-					>Due Date</label
-				>
-				<div class="col-md-6">
-					<input
-						class="form-control"
-						type="date"
-						value="2019-02-08"
-						id="due-date-input"
-					/>
+					>
 				</div>
-			</div>
-		</form>
-	</div>
-	<div class="create-task--assign">
-		<div class="create-task--right-panel">
-			<div class="create-task-control-group">
-				<label class="">Assign</label>
-				<div class="create-task--assign-pit">
-					<ul>
-						<li><i class="far fa-square"></i> Heath Campbell</li>
-						<li><i class="far fa-square"></i> Beef Campbell</li>
-						<li><i class="far fa-square"></i> Keath Campbell</li>
-						<li><i class="far fa-square"></i> Heath Campbell</li>
-						<li><i class="far fa-square"></i> Beef Campbell</li>
-						<li><i class="far fa-square"></i> Keath Campbell</li>
-						<li><i class="far fa-square"></i> Heath Campbell</li>
-						<li><i class="far fa-square"></i> Beef Campbell</li>
-						<li><i class="far fa-square"></i> Keath Campbell</li>
-						<li><i class="far fa-square"></i> Heath Campbell</li>
-						<li><i class="far fa-square"></i> Beef Campbell</li>
-						<li><i class="far fa-square"></i> Keath Campbell</li>
-						<li><i class="far fa-square"></i> Heath Campbell</li>
-						<li><i class="far fa-square"></i> Beef Campbell</li>
-						<li><i class="far fa-square"></i> Keath Campbell</li>
-						<li><i class="far fa-square"></i> Heath Campbell</li>
-						<li><i class="far fa-square"></i> Beef Campbell</li>
-						<li><i class="far fa-square"></i> Keath Campbell</li>
-						<li><i class="far fa-square"></i> Heath Campbell</li>
-						<li><i class="far fa-square"></i> Beef Campbell</li>
-						<li><i class="far fa-square"></i> Keath Campbell</li>
-					</ul>
+				<!-- Textarea -->
+				<div class="create-task-control-group">
+					<label class="col-md-4 control-label" for="textarea"
+						>Task Description</label
+					>
+					<textarea id="textarea" name="textarea">
+follow the dog house plans</textarea
+					>
+				</div>
+				<!-- Select Multiple -->
+				<div class="create-task-control-group">
+					<label class="col-md-4 control-label" for="selectmultiple"
+						>Due Date</label
+					>
+					<div class="col-md-6">
+						<input
+							class="form-control"
+							type="date"
+							value="2019-02-08"
+							id="due-date-input"
+						/>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="create-task--assign">
+			<div class="create-task--right-panel">
+				<div class="create-task-control-group">
+					<label class="">Assign</label>
+					<div class="create-task--assign-pit">
+						<ul>
+							<li><i class="far fa-square"></i> Heath Campbell</li>
+							<li><i class="far fa-square"></i> Beef Campbell</li>
+							<li><i class="far fa-square"></i> Keath Campbell</li>
+							<li><i class="far fa-square"></i> Heath Campbell</li>
+							<li><i class="far fa-square"></i> Beef Campbell</li>
+							<li><i class="far fa-square"></i> Keath Campbell</li>
+							<li><i class="far fa-square"></i> Heath Campbell</li>
+							<li><i class="far fa-square"></i> Beef Campbell</li>
+							<li><i class="far fa-square"></i> Keath Campbell</li>
+							<li><i class="far fa-square"></i> Heath Campbell</li>
+							<li><i class="far fa-square"></i> Beef Campbell</li>
+							<li><i class="far fa-square"></i> Keath Campbell</li>
+							<li><i class="far fa-square"></i> Heath Campbell</li>
+							<li><i class="far fa-square"></i> Beef Campbell</li>
+							<li><i class="far fa-square"></i> Keath Campbell</li>
+							<li><i class="far fa-square"></i> Heath Campbell</li>
+							<li><i class="far fa-square"></i> Beef Campbell</li>
+							<li><i class="far fa-square"></i> Keath Campbell</li>
+							<li><i class="far fa-square"></i> Heath Campbell</li>
+							<li><i class="far fa-square"></i> Beef Campbell</li>
+							<li><i class="far fa-square"></i> Keath Campbell</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="create-task--footer">
-		<div class="create-task--button-group">
-			<div class="create-task--task-id">
-				<span>#F41AB3</span>
+		<div class="create-task--footer">
+			<div class="create-task--button-group">
+				<div class="create-task--task-id">
+					<span>#F41AB3</span>
+				</div>
+				<button
+					id="button2id"
+					name="button2id"
+					class="create-task--cancel-btn"
+				>
+					Cancel
+				</button>
+				<button
+					id="button1id"
+					name="button1id"
+					class="create-task--create-btn"
+				>
+					<i class="fas fa-plus"></i> Create
+				</button>
 			</div>
-			<button
-				id="button2id"
-				name="button2id"
-				class="create-task--cancel-btn"
-			>
-				Cancel
-			</button>
-			<button
-				id="button1id"
-				name="button1id"
-				class="create-task--create-btn"
-			>
-				<i class="fas fa-plus"></i> Create
-			</button>
 		</div>
 	</div>
 </div>
