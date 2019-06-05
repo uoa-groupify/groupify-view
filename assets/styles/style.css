@@ -91,6 +91,15 @@ hr {
 #tableheight {
     height: 200px;
 }
+#buttonheight {
+    height: 126px;
+}
+#button2height{
+    height:50px;
+    background-color: #3498db;
+    border: #3498db;
+    color: white;
+}
 #project {
     max-width: 300px;
     max-height: 200px;
